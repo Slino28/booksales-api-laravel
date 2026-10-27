@@ -5,11 +5,12 @@
     <title>Daftar Author</title>
 </head>
 <body>
-    <h2>Daftar Penulis (Author)</h2>
-    <ul>
-        @foreach ($authors as $a)
-            <li>{{ $a['id'] }} - {{ $a['nama'] }} ({{ $a['negara'] }})</li>
-        @endforeach
-    </ul>
+    <h2>Daftar Penulis Buku</h2>
+    @foreach ($authors as $item)
+        <ul>
+            <li><strong>Nama:</strong> {{ $item->name }}</li>
+            <li><strong>Bio:</strong> {{ $item->bio }}</li>
+        </ul>
+    @endforeach
 </body>
 </html>
